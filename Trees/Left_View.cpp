@@ -17,6 +17,7 @@ TreeNode* insert(TreeNode* root, int val)
         node->val = val;
         node->left = NULL;
         node->right = NULL;
+	    
         return node;
     }
     
