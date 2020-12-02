@@ -29,7 +29,7 @@ void push(int x)
       temp=temp->next;
     }
     
-    temp->next=push_val;
+    temp->next=push_val; 
   }
 }
 
