@@ -30,7 +30,7 @@ public:
             return true; 
         return false; 
     } 
-  
+ 
     // count the number of nodes in list 
     int size() 
     { 
