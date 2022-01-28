@@ -35,6 +35,33 @@ void push(int data)
     
 }
 
+void deleteNode(int key)
+{
+    Node* temp = head;
+    Node* prev;
+    
+    if(temp != NULL && temp->data == key)
+    {
+        head = temp->next;
+        free(temp);
+        return;
+    }
+    
+    while(temp != NULL && temp->data != key)
+    {
+        prev = temp;
+        temp = temp->next;
+    }
+    
+    if(temp == NULL)
+    return;
+    
+    prev->next = temp->next;
+    
+    free(temp);
+    
+}
+
 void printList()
 {
     Node* temp = head;
@@ -55,6 +82,10 @@ int main()
     push(3);
     push(4);
     push(5);
+    
+    printList();
+    
+    deleteNode(3);
     
     printList();
     
